@@ -29,6 +29,9 @@ app.get('/record',(req,res)=>{
         return res.json({msg:`${name} called the api for the first time.`})
     }
 });
+app.get('/viewcallers',(req,res)=>{
+    return res.json({callers: cmap})
+  })
 app.listen(port,()=>{
 console.log(`Server running at port ${port}`);
 })
